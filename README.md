@@ -1,4 +1,8 @@
 # Online-Store-Sales
+
+![int](https://github.com/Billy1999/Online-Store-Sales/assets/138803416/5bfef38e-195b-417d-bcaa-e22b91615ee3)
+
+
 ##Overview
 ---
 
@@ -120,6 +124,7 @@ ORDER BY 2 DESC;
 
 ##Data Visualization
 ---
+For Interactive dashboard click [here.](https://public.tableau.com/app/profile/billy.ochieng/viz/OnlineStoreSalesDashboard_16989160843340/Dashboard1#1)
 
 There is a steady increse in sales throughout the year with a spike in sales during the holiday season.
 The store recorded total sales of $34,492063, December being the month with the highest sales.
