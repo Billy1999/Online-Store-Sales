@@ -78,7 +78,7 @@ Exploratory Data Analysis (EDA)
 Data analysis
 ---
 
-Includes some interesting codes used. For instance;
+Includes some interesting codes used;
 
 1. Using a derived column to get the actual total cost of goods sold as the cost price only represents one item.
 
