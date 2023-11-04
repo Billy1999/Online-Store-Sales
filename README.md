@@ -7,7 +7,7 @@ This Sales Analysis Project is aimed at comprehensively understanding and analyz
 
 •	Data/: Contains the raw dataset.
 
-•	cripts/: Includes SQL queries used for analysis.
+•	Scripts/: Includes SQL queries used for analysis.
 
 •	reports/: Contains the generated reports and visualizations.
 
@@ -15,27 +15,126 @@ This Sales Analysis Project is aimed at comprehensively understanding and analyz
 
 The dataset used for this analysis consists of the following columns:
 
-‘Order Date’: The date and time when the order was made.
+- ‘Order Date’: The date and time when the order was made.
 
-‘Order ID’: Unique identifier for each order.
+- ‘Order ID’: Unique identifier for each order.
 
-‘Product’: Name of the product.
+- ‘Product’: Name of the product.
 
-‘Product EAN’: Unique identifier for each product sold.
+- ‘Product EAN’: Unique identifier for each product sold.
 
-‘Category’: The category of the product sold.
+- ‘Category’: The category of the product sold.
 
-‘State’: Unique identifier for each state.
+- ‘State’: Unique identifier for each state.
 
-‘Purchase Address’: The physical address of the buyer.
+- ‘Purchase Address’: The physical address of the buyer.
 
-‘Quantity Ordered’: the number of items ordered per product.
+- ‘Quantity Ordered’: the number of items ordered per product.
 
-‘Price Each’: The selling price of the product in dollars.
+- ‘Price Each’: The selling price of the product in dollars.
 
-‘Cost price’: The cost price of the product in dollars.
+- ‘Cost price’: The cost price of the product in dollars.
 
-‘Turnover’: The total price for the order of the product in dollars.
+- ‘Turnover’: The total price for the order of the product in dollars.
 
-‘Margin’: The profit made per order.
+- ‘Margin’: The profit made per order.
 
+##Tools
+
+Excel - Data Cleaning.
+
+PostgreSQL - Data Analysis.
+
+Tableau - Data Visualization.
+
+##Data cleaning and preparation
+This process involved;
+
+1. Data Loading and Inspection.
+
+2. Removing blanks and duplicate orders from the dataset.
+
+##Exploratory Data Analysis (EDA)
+
+-Explored sales trends over time.
+
+-Analyzed the distribution of sales across different product categories.
+
+-Investigated the relationship between price and quantity sold.
+
+-Identified top-selling products and customer segments.
+
+##Data analysis
+
+Includes some interesting codes used. For instance;
+
+1. Using a derived column to get the actual total cost of goods sold as the cost price only represents on item.
+
+```SQL
+WITH T1 AS(
+      SELECT product, (turnover - margin) AS cogs
+      FROM sales)
+SELECT SUM(cogs) as Cost_of_sales
+FROM T1;
+```
+
+2. Using 'DATE_PART' function to show sales trend by 'month'.
+
+```SQL
+
+WITH T1 AS(
+          SELECT DATE_PART('MONTH', order_date)AS month, SUM(turnover) AS Total_sales
+          FROM sales
+          GROUP BY 1)
+SELECT month, SUM(Total_sales) AS Total_sales
+FROM T1
+GROUP BY 1
+ORDER BY 1;
+```
+
+3. Creating a temporary table that uses 'LEFT', 'RIGHT'and 'POSITION' functions to extract the state abbreviation in the 'purchase address' column and then joining the temporary table to the 'sales' table to show the distribution of sales by state.
+
+```SQL
+WITH T1 AS(			
+		SELECT purchase_address, right(purchase_address, 8) as p_a
+		FROM sales),
+	 T2 AS(
+		SELECT purchase_address, LEFT(p_a, 2) as state
+		FROM T1)
+
+SELECT T2.state, SUM(S.Turnover) AS total_sales
+FROM T2
+JOIN sales s
+ON s.purchase_address = T2.purchase_address
+GROUP BY 1
+ORDER BY 2 DESC;
+```
+
+##Data Visualization
+
+Created line plots to visualize sales trends over time.
+
+Generated bar charts to illustrate sales distribution across product categories.
+
+Plotted scatter plots to examine the relationship between price and quantity sold.
+
+![Sales Trend](https://github.com/Billy1999/Online-Store-Sales/assets/138803416/1515a6dd-e0d7-42d8-9e4c-cae6bfb2c273)
+
+
+
+
+##Insights
+
+1. Identified a steady increse in sales throughout the year with a spike in sales during the holiday season.
+
+2. Al 4 product categories generated an even amount of revenue (25%).
+
+3. Markbook Pro Laptop is the most profitable product with highest sales recorded during the holiday season.
+
+4. AAA Bateries (4-pack) is the most sold product in every state.
+ 
+5. California is the leading state in overall sales.
+
+##Recommendation
+
+There is a huge chance of expansion into other states in the USA as the store is currently operating in 8 states.
