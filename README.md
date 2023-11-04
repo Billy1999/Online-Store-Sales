@@ -1,9 +1,11 @@
 # Online-Store-Sales
 ##Overview
+---
 
 This Sales Analysis Project is aimed at comprehensively understanding and analyzing the sales data of Online Sales Store in order to derive actionable insights and make informed business decisions. By examining the sales patterns, trends, and key performance indicators, the project intends to identify potential opportunities for growth, as well as any areas that require improvement.
 
 ##Project Structure
+---
 
 •	Data/: Contains the raw dataset.
 
@@ -12,6 +14,7 @@ This Sales Analysis Project is aimed at comprehensively understanding and analyz
 •	reports/: Contains the generated reports and visualizations.
 
 ##Data Description
+---
 
 The dataset used for this analysis consists of the following columns:
 
@@ -40,6 +43,7 @@ The dataset used for this analysis consists of the following columns:
 - ‘Margin’: The profit made per order.
 
 ##Tools
+---
 
 Excel - Data Cleaning.
 
@@ -48,6 +52,8 @@ PostgreSQL - Data Analysis.
 Tableau - Data Visualization.
 
 ##Data cleaning and preparation
+---
+
 This process involved;
 
 1. Data Loading and Inspection.
@@ -55,6 +61,7 @@ This process involved;
 2. Removing blanks and duplicate orders from the dataset.
 
 ##Exploratory Data Analysis (EDA)
+---
 
 -Explored sales trends over time.
 
@@ -65,6 +72,7 @@ This process involved;
 -Identified top-selling products and customer segments.
 
 ##Data analysis
+---
 
 Includes some interesting codes used. For instance;
 
@@ -111,17 +119,17 @@ ORDER BY 2 DESC;
 ```
 
 ##Data Visualization
+---
 
-Created line plots to visualize sales trends over time.
-
-Generated bar charts to illustrate sales distribution across product categories.
-
-Plotted scatter plots to examine the relationship between price and quantity sold.
-
+There is a steady increse in sales throughout the year with a spike in sales during the holiday season.
+The store recorded total sales of $34,492063, December being the month with the highest sales.
 ![Sales Trend](https://github.com/Billy1999/Online-Store-Sales/assets/138803416/1515a6dd-e0d7-42d8-9e4c-cae6bfb2c273)
 
+Markbook Pro Laptop is the most profitable product with highest sales recorded during the holiday season.
+![](Profitability.JPG)
 
-
+AAA Bateries (4-pack) is the most sold product in every state with a total oders of upto 31,017.
+![](Sales_Volume.JPG)
 
 ##Insights
 
