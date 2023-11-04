@@ -125,24 +125,21 @@ There is a steady increse in sales throughout the year with a spike in sales dur
 The store recorded total sales of $34,492063, December being the month with the highest sales.
 ![Sales Trend](https://github.com/Billy1999/Online-Store-Sales/assets/138803416/1515a6dd-e0d7-42d8-9e4c-cae6bfb2c273)
 
-Markbook Pro Laptop is the most profitable product with highest sales recorded during the holiday season.
+Markbook Pro Laptop is the most profitable product at $5.39 Million with highest sales recorded during the holiday season.
 ![](Profitability.JPG)
 
 AAA Bateries (4-pack) is the most sold product in every state with a total oders of upto 31,017.
-![](Sales_Volume.JPG)
+![Sales Volume](https://github.com/Billy1999/Online-Store-Sales/assets/138803416/39ac7fe0-73bf-4226-abe0-1c5c2d34a0d6)
 
-##Insights
+California is the leading state in overall sales with total sale of $13.71 Million.
+The store is currenntly operating in 8 States in the USA.
 
-1. Identified a steady increse in sales throughout the year with a spike in sales during the holiday season.
+![Map](https://github.com/Billy1999/Online-Store-Sales/assets/138803416/c74ce85e-1022-4f36-bde1-25703343fa79)
 
-2. Al 4 product categories generated an even amount of revenue (25%).
-
-3. Markbook Pro Laptop is the most profitable product with highest sales recorded during the holiday season.
-
-4. AAA Bateries (4-pack) is the most sold product in every state.
- 
-5. California is the leading state in overall sales.
+---
 
 ##Recommendation
 
-There is a huge chance of expansion into other states in the USA as the store is currently operating in 8 states.
+For a deeper analysis, the dataset of the previous year will be required for comparison and data driven decision making.
+
+---
