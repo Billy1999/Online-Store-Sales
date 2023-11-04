@@ -11,11 +11,11 @@ This Sales Analysis Project is aimed at comprehensively understanding and analyz
 Project Structure
 ---
 
-•	Data/: Contains the raw dataset.
+- Data/: Contains the raw dataset.
 
-•	Scripts/: Includes SQL queries used for analysis.
+- Scripts/: Includes SQL queries used for analysis.
 
-•	reports/: Contains the generated reports and visualizations.
+- Reports/: Contains the generated reports and visualizations.
 
 Data Description
 ---
@@ -125,6 +125,8 @@ ORDER BY 2 DESC;
 Data Visualization
 ---
 For an Interactive dashboard, click [here.](https://public.tableau.com/app/profile/billy.ochieng/viz/OnlineStoreSalesDashboard_16989160843340/Dashboard1#1)
+
+---
 
 There is a steady increse in sales throughout the year with a spike in sales during the holiday season.
 The store recorded total sales of $34,492063, December being the month with the highest sales.
